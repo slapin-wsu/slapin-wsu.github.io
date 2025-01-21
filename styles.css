@@ -50,3 +50,26 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.center-content {
+  text-align: center; /* Centers the text below the image */
+}
+
+.scaled-image {
+  width: 50%; /* Adjust the size of the image */
+  max-width: 300px; /* Optional: limit the maximum width */
+  height: auto; /* Maintains the aspect ratio */
+  margin-bottom: 20px; /* Adds space between image and text */
+}
+
