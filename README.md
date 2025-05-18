@@ -1,1 +1,1 @@
-# slapin.github.io
+# slapin-wsu.github.io
