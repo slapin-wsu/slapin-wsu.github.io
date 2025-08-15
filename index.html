@@ -214,45 +214,43 @@
                     </div>
                 </div>
             </section>
-						<!-- Students -->
+<!-- Students -->
 <section id="students" class="resume-section">
   <div class="resume-section-content">
     <h2 class="mb-5">Students</h2>
 
-    <h3 class="mb-3">Current</h3>
-    <div class="row">
-      {% for s in site.data.students.current %}
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          {% if s.photo %}
-          <img class="card-img-top" src="{{ s.photo }}" alt="{{ s.name }}">
-          {% endif %}
-          <div class="card-body">
-            <h5 class="card-title mb-1">{{ s.name }}</h5>
-            <span class="badge bg-secondary">{{ s.level }}</span>
-            <p class="text-muted mb-1">{{ s.program }}</p>
-            <p class="mb-2"><em>Since {{ s.start }}</em></p>
-            <p class="mb-2">{{ s.project }}</p>
-            <p class="mb-0">
-              {% if s.website %}<a href="{{ s.website }}">Website</a>{% endif %}
-              {% if s.github %}{% if s.website %} · {% endif %}<a href="{{ s.github }}">GitHub</a>{% endif %}
-              {% if s.linkedin %}{% if s.website or s.github %} · {% endif %}<a href="{{ s.linkedin }}">LinkedIn</a>{% endif %}
-            </p>
-          </div>
+    <h3 class="h5 text-uppercase text-muted mb-3">Current</h3>
+    <ul class="list-unstyled">
+      <!-- COPY/PASTE THIS BLOCK PER STUDENT -->
+      <li class="mb-3">
+        <strong>Atemii Remizov</strong>
+        <span class="badge bg-secondary ms-1">High School</span><br>
+        <span class="text-muted small">Since July 2025 - Independent study</span><br>
+        Project: Modeing of Cardiac Arrhythmia
+        <!-- Optional links -->
+        <div class="small mt-1">
+          <a href="#" class="me-2">Website</a>
+          <a href="#" class="me-2">GitHub</a>
+          <a href="#">LinkedIn</a>
         </div>
-      </div>
-      {% endfor %}
-    </div>
+      </li>
+      <!-- /BLOCK -->
+      <li class="mb-3">
+        <strong>Walker Raubich</strong>
+        <span class="badge bg-secondary ms-1">Undergraduate</span><br>
+        <span class="text-muted small">Since March 2025 - B.S. Mathematics</span><br>
+        Project: Modeling of Traffic Flow
+      </li>
+    </ul>
 
-    <h3 class="mt-4 mb-3">Alumni</h3>
+    <h3 class="h5 text-uppercase text-muted mt-4 mb-3">Alumni</h3>
     <ul class="fa-ul mb-0">
-      {% for a in site.data.students.alumni %}
+      <!-- COPY/PASTE THIS LINE PER ALUM 
       <li class="mb-2">
         <span class="fa-li"><i class="fas fa-user-graduate"></i></span>
-        <strong>{{ a.name }}</strong> — {{ a.level }}, {{ a.program }} ({{ a.years }})
-        {% if a.next_step %} · Next: {{ a.next_step }}{% endif %}
-      </li>
-      {% endfor %}
+        <strong>Katherine Johnson</strong> — M.S., Applied Math (2023–2025) · Next: PhD @ WSU
+      </li>-->
+      <!-- /LINE -->
     </ul>
   </div>
 </section>
