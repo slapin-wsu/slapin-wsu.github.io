@@ -214,6 +214,49 @@
                     </div>
                 </div>
             </section>
+						<!-- Students -->
+<section id="students" class="resume-section">
+  <div class="resume-section-content">
+    <h2 class="mb-5">Students</h2>
+
+    <h3 class="mb-3">Current</h3>
+    <div class="row">
+      {% for s in site.data.students.current %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          {% if s.photo %}
+          <img class="card-img-top" src="{{ s.photo }}" alt="{{ s.name }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title mb-1">{{ s.name }}</h5>
+            <span class="badge bg-secondary">{{ s.level }}</span>
+            <p class="text-muted mb-1">{{ s.program }}</p>
+            <p class="mb-2"><em>Since {{ s.start }}</em></p>
+            <p class="mb-2">{{ s.project }}</p>
+            <p class="mb-0">
+              {% if s.website %}<a href="{{ s.website }}">Website</a>{% endif %}
+              {% if s.github %}{% if s.website %} · {% endif %}<a href="{{ s.github }}">GitHub</a>{% endif %}
+              {% if s.linkedin %}{% if s.website or s.github %} · {% endif %}<a href="{{ s.linkedin }}">LinkedIn</a>{% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="mt-4 mb-3">Alumni</h3>
+    <ul class="fa-ul mb-0">
+      {% for a in site.data.students.alumni %}
+      <li class="mb-2">
+        <span class="fa-li"><i class="fas fa-user-graduate"></i></span>
+        <strong>{{ a.name }}</strong> — {{ a.level }}, {{ a.program }} ({{ a.years }})
+        {% if a.next_step %} · Next: {{ a.next_step }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
             <hr class="m-0" />
             <!-- Skills-->
             <section class="resume-section" id="skills">
